@@ -5,6 +5,8 @@ import { SiLinkedin } from "react-icons/si";
 import contact_img from '../assets/contact-img.png'
 import { motion } from "framer-motion";
 import { Animator, MoveIn } from "react-scroll-motion";
+import { GrDocumentPdf } from "react-icons/gr";
+import CV from '../assets/ThuHa_Resume.pdf'
 
 export default function Contact() {
   return (
@@ -38,6 +40,9 @@ export default function Contact() {
           </motion.a>
           <motion.a whileHover={{scale:1.2}} href="https://www.linkedin.com/in/ntthuha/"  className="mx-2 w-12 h-12 md:w-14 md:h-14 flex justify-center items-center rounded-full bg-blue-500/90 hover:bg-blue-600 hover:duration-200 hover:transition hover:ease-in-out">
             <SiLinkedin className="text-xl md:text-3xl text-white" />
+          </motion.a>
+          <motion.a whileHover={{scale:1.2}} href={CV}  className="mx-2 w-12 h-12 md:w-14 md:h-14 flex justify-center items-center rounded-full bg-blue-500/90 hover:bg-blue-600 hover:duration-200 hover:transition hover:ease-in-out">
+            <GrDocumentPdf className="text-xl md:text-3xl text-white" />
           </motion.a>
         </div>
       </Animator>
