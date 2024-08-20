@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import bg_img from '../assets/bg.png'
+
 export default function About() {
     
     const handleScroll = (e) => {

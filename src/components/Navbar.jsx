@@ -25,7 +25,7 @@ export default function Navbar({handleSection}) {
                         <FaBars className='sm:block md:hidden text-white text-2xl cursor-pointer' onClick={() => setIsShow(!isShow)} />
                     </motion.div>
                 </div>
-                <div className={`${isShow ? 'block pt-5' : 'hidden'} w-full md:block `}>
+                <div className={`${isShow ? 'block pt-5' : 'hidden'} w-full md:w-full lg:w-2/3  md:block `}>
                     <ul className='flex justify-between items-center font-semibold md:text-lg text-white text-base'>
                         <motion.a href="#what-i-learn" onClick={handleSection}
                         whileHover={{ scale: 1.05 }}

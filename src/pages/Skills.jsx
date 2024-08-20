@@ -7,20 +7,6 @@ import { IoLanguage } from "react-icons/io5";
 export default function Skills() {
   const [category, setCategory] = useState('programming');
 
-  const show = {
-    opacity: 1,
-    display: "block",
-    // transition: { duration: 0.5 }
-  };
-
-  const hide = {
-    opacity: 0,
-    transitionEnd: {
-      display: "none"
-    },
-    // transition: { duration: 0.5 }
-  };
-
   return (
     <div id="skills" className="w-full bg-yellow-200/10">
       <div className="md:pt-10 px-5 md:px-20 grid grid-cols-5 md:grid-cols-6 lg:grid-cols-8 flex items-center justify-center h-full">
@@ -91,7 +77,7 @@ export default function Skills() {
           {category === 'programming' && (
             <motion.div
               // animate={category === 'programming' ? show : hide}
-              className="pl-5 md:pl-10 w-full flex flex-col justify-center items-center pt-20 text-center"
+              className="pl-5 md:pl-10 w-full flex flex-col justify-center items-center text-center"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -115,7 +101,7 @@ export default function Skills() {
           {/* Team Work */}
           {category === 'team-work' && (
             <motion.div
-              className="pl-5 md:pl-10 w-full flex flex-col justify-center items-center pt-20 text-center"
+              className="pl-5 md:pl-10 w-full flex flex-col justify-center items-center text-center"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -136,7 +122,7 @@ export default function Skills() {
           {/* Languages */}
           {category === 'languages' && (
             <motion.div
-              className="pl-5 md:pl-10 w-full flex flex-col justify-center items-center pt-20 text-center"
+              className="pl-5 md:pl-10 w-full flex flex-col justify-center items-center text-center"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{

@@ -74,8 +74,8 @@ export default function Projects() {
 
               <div className="absolute top-0 hidden group-hover:block cursor-pointer bg-blue-500/95 w-full h-full ">
                 <div className="flex flex-col justify-center items-center h-full text-center">
-                  <div className="text-lg text-slate-100">{item.techuse}</div>
-                  <div className="text-xl font-semibold text-white">{item.title}</div>
+                  <div className="text-sm md:text-lg text-slate-100">{item.techuse}</div>
+                  <div className="text-base md:text-xl font-semibold text-white">{item.title}</div>
                 </div>
               </div>
             </motion.div>

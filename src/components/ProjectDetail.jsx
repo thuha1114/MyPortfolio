@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 
 import { IoMdClose } from "react-icons/io";
+import { Carousel } from "react-responsive-carousel";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 // eslint-disable-next-line no-unused-vars
 export default function ProjectDetail({item, isShow, setIsShow,}) {
@@ -10,11 +12,16 @@ export default function ProjectDetail({item, isShow, setIsShow,}) {
           <IoMdClose className="md:text-lg lg:text-2xl" onClick={() => setIsShow(false)}/>
         </div>
         <div className="flex flex-col items-center pt-10 ">
-          <img className="w-[300px] md:w-[600px] lg:w-[800px]" src={item[0].imgFS} />
-          {/* <p className="font-bold text-3xl pt-5 text-slate-800">{item[0].title}</p> */}
-          <div className="flex flex-col justify-center items-center h-full text-center pt-5 px-10">
-            <div className="md:text-lg lg:text-xl text-slate-100">{item[0].techuse}</div>
-            <div className="text-lg md:text-xl lg:text-2xl font-semibold text-white">{item[0].title}</div>
+          <div className="w-[300px] md:w-[500px] lg:w-[700px]">
+            <Carousel showArrows={true} className=''>
+              {item[0].imgFS.map((img,index) => (
+                <img key={index} className="w-[300px] md:w-[600px] lg:w-[800px]" src={img} alt='Image of project' />
+              ))}
+            </Carousel>
+          </div>
+          <div className="flex flex-col justify-center items-center h-full text-center px-10">
+            <div className="md:text-lg lg:text-lg text-slate-100">{item[0].techuse}</div>
+            <div className="text-lg md:text-xl lg:text-xl font-semibold text-white">{item[0].title}</div>
           </div>
         </div>
 
